@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
-    "jsx": "react-jsx", // Use automatic JSX if supported by your bundler
-    "jsxImportSource": "./src/jsxFactory.ts", // Or path to your JSX factory
-    "types": [], // Skip importing React types at runtime
+    "jsx": "react",
+    "jsxFactory": "jsx",
+    "jsxFragmentFactory": "Fragment",
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "module": "Preserve",
+    "module": "ESNext",
     "lib": [
       "ES2020",
       "DOM",
@@ -18,15 +18,18 @@
     "declarationDir": "./dist",
     "outDir": "./dist",
     /* Bundler mode */
-    "moduleResolution": "Bundler",
+    "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "baseUrl": ".",
+    "noEmit": true,
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": false,
     "removeComments": false
   },
   "include": [
